@@ -4,53 +4,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Footer</title>
   <link rel="stylesheet" href="dist/output.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   
 </body>
 </html>
-<footer id="footer">
-  <div class="container">
-    <div class="grid grid-cols-4">
-    <div>
-          <img src="./img//logo.png" alt="logo-daihatsu" class="h-full w-full">
-        </div>
-      <div class="col-2 col-md-6 footer-info">
-        
-        <div>
-          <h3 class="align-item center">Tentang Kami</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam consectetur, dui in luctus congue, sem justo condimentum dolor, et consectetur elit massa vitae mi.</p>
-        </div>
-      </div>
+<footer id="footer" class="bg-black py-12">
+  <div class="flex justify-between container mx-auto px-10">
+    <div class="w-3/12 flex flex-col gap-9">
+      <img width="173" src="./img/Logo.png" alt="">
+      <p class="text-white">Kunjungi Daihatsu Mobil Dealer kami hari ini dan temukan mobil impian Anda. Dengan kami, Anda akan merasakan kehangatan dan keramahan layanan kami yang membuat Anda merasa seperti keluarga.</p>
+      <div class="flex">
+      <img class="mr-10" src="./img/ig_1.png" alt="">
+      <img class="mr-10" src="./img/twiter.png" alt="">
+      <img class="mr-10" src="./img/facebook.png" alt="">
 
-      <div class="col-lg-4 col-md-6 flex-auto footer-links">
-        <h3>Menu Cepat</h3>
-        <ul>
-          <li><a href="index.php">Beranda</a></li>
-          <li><a href="about.php">Tentang Kami</a></li>
-          <li><a href="services.php">Layanan</a></li>
-          <li><a href="contact.php">Kontak</a></li>
-        </ul>
-      </div>
-
-      <div class="col-lg-4 col-md-6 flex-auto footer-contact">
-        <h3>Kontak</h3>
-        <p>
-          Jalan Raya No. 123<br>
-          Kota Anda, Negara Anda<br>
-          <strong>Telepon:</strong> +123456789<br>
-          <strong>Email:</strong> info@example.com<br>
-        </p>
       </div>
     </div>
+  <div class="flex text-white gap-9 mr-11">
+      <div class="flex flex-col gap-6">
+        <h4 class="font-bold">About Us</h4>
+        <a href="">Halaman Utama</a>
+        <a href="">Vehicle</a>
+        <a href="">Tentang Kami</a>
+        <a href="">Layanan</a>
+      </div>
+      <div class="flex flex-col gap-6">
+        <h4 class="font-bold">Hubungi</h4>
+        <a href="">Kontak</a>
+        <a href="">Facebook</a>
+        <a href="">Instagram</a>
+        <a href="">Twitter</a>
+      </div>
   </div>
 
-  <div class="container">
-    <div class="social-links">
-      <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-      <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-      <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-      <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-    </div>
   </div>
 </footer><!-- #footer -->
