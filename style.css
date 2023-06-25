@@ -1,0 +1,558 @@
+.landing-page,
+.landing-page * {
+  box-sizing: border-box;
+}
+.landing-page {
+  background: #ffffff;
+  width: 1920px;
+  height: 4081px;
+  position: relative;
+  overflow: hidden;
+}
+.background-belakang-1 {
+  width: 1977px;
+  height: 1094px;
+  position: absolute;
+  left: -37px;
+  top: 0px;
+}
+.rectangle-11 {
+  background: #ffffff;
+  width: 1920px;
+  height: 118px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.logo {
+  width: 173px;
+  height: 35px;
+  position: absolute;
+  left: 55px;
+  top: 34px;
+}
+.beranda {
+  color: #000000;
+  text-align: left;
+  font: 600 20px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 633px;
+  top: 39px;
+}
+.tentang-kami {
+  color: #000000;
+  text-align: left;
+  font: 600 20px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 934px;
+  top: 39px;
+}
+.layanan {
+  color: #000000;
+  text-align: left;
+  font: 600 20px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 1138px;
+  top: 39px;
+}
+.frame-9 {
+  background: #e71d4f;
+  border-radius: 10px;
+  padding: 6px 37px 6px 37px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 1594px;
+  top: 32px;
+  overflow: hidden;
+}
+.login {
+  color: #ffffff;
+  text-align: left;
+  font: 900 20px "Nunito Sans", sans-serif;
+  position: relative;
+}
+.register {
+  color: #e71d4f;
+  text-align: left;
+  font: 600 20px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 1740px;
+  top: 39px;
+}
+.vehicle {
+  color: #000000;
+  text-align: left;
+  font: 600 20px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 789px;
+  top: 39px;
+}
+.frame-11 {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: flex-end;
+  position: absolute;
+  left: 157px;
+  top: 334px;
+}
+.solusi-tepat-memilih-mobil-impian {
+  color: #ffffff;
+  text-align: left;
+  font: 800 96px "Nunito Sans", sans-serif;
+  position: relative;
+}
+.Judul {
+  color: #ffffff;
+  text-align: left;
+  font: 600 16px "Nunito Sans", sans-serif;
+  position: relative;
+  width: 538.08px;
+  transform-origin: 0 0;
+  transform: rotate(-0.131deg) scale(1, 1);
+}
+.frame-10 {
+  background: #e71d4f;
+  border-radius: 10px;
+  padding: 16px 45px 16px 45px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 157px;
+  top: 774px;
+  overflow: hidden;
+}
+.lihat-selengkapnya {
+  color: #ffffff;
+  text-align: left;
+  font: 600 20px "Nunito Sans", sans-serif;
+  position: relative;
+}
+.ellipse-2 {
+  background: rgba(255, 90, 90, 0.39);
+  border-radius: 50%;
+  width: 479.08px;
+  height: 697.66px;
+  position: absolute;
+  left: 1478.7px;
+  top: 170px;
+  transform-origin: 0 0;
+  transform: rotate(29.893deg) scale(1, 1);
+}
+.rocky {
+  width: 810px;
+  height: 457px;
+  position: absolute;
+  left: 1033px;
+  top: 484px;
+}
+.kenapa-pilih-mobil-daihatsu {
+  color: #000000;
+  text-align: left;
+  font: 900 64px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 155px;
+  top: 2077px;
+  width: 813px;
+}
+.kami-memahami-betapa-pentingnya-sebuah-mobil-dalam-kehidupan-anda-itulah-mengapa-kami-dengan-bangga-menyajikan-beragam-pilihan-mobil-daihatsu-yang-dapat-disesuaikan-dengan-gaya-hidup-dan-preferensi-anda {
+  color: #000000;
+  text-align: left;
+  font: 600 16px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 155px;
+  top: 2300.46px;
+  width: 636.8px;
+  transform-origin: 0 0;
+  transform: rotate(-0.131deg) scale(1, 1);
+}
+.sigera {
+  width: 948px;
+  height: 669px;
+  position: absolute;
+  left: 1821px;
+  top: 2222px;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+}
+.happy-clint {
+  border-radius: 20px;
+  width: 268px;
+  height: 215px;
+  position: absolute;
+  left: 159px;
+  top: 2454px;
+  box-shadow: 0px 4px 13px -1px rgba(0, 0, 0, 0.25);
+}
+.showroom {
+  border-radius: 20px;
+  width: 261px;
+  height: 215px;
+  position: absolute;
+  left: 484px;
+  top: 2454px;
+  box-shadow: 0px 4px 13px -1px rgba(0, 0, 0, 0.25);
+}
+.stock {
+  border-radius: 20px;
+  width: 268px;
+  height: 215px;
+  position: absolute;
+  left: 159px;
+  top: 2737px;
+  box-shadow: 0px 4px 13px -1px rgba(0, 0, 0, 0.25);
+}
+.award {
+  border-radius: 20px;
+  width: 265px;
+  height: 212px;
+  position: absolute;
+  left: 484px;
+  top: 2740px;
+  box-shadow: 0px 4px 13px -1px rgba(0, 0, 0, 0.25);
+}
+.rectangle-10 {
+  background: #000000;
+  width: 1920px;
+  height: 492px;
+  position: absolute;
+  left: 0px;
+  top: 3610px;
+}
+.logo2 {
+  width: 173px;
+  height: 35px;
+  position: absolute;
+  left: 158px;
+  top: 3710px;
+}
+.about {
+  color: #ffffff;
+  text-align: center;
+  font: 800 24px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 1234px;
+  top: 3689px;
+  width: 148px;
+}
+.hubungi {
+  color: #ffffff;
+  text-align: center;
+  font: 800 24px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 1583px;
+  top: 3689px;
+  width: 148px;
+}
+.kunjungi-daihatsu-mobil-dealer-kami-hari-ini-dan-temukan-mobil-impian-anda-dengan-kami-anda-akan-merasakan-kehangatan-dan-keramahan-layanan-kami-yang-membuat-anda-merasa-seperti-keluarga {
+  color: #ffffff;
+  text-align: left;
+  font: 600 16px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 155px;
+  top: 3797px;
+  width: 385px;
+}
+.halaman-utama {
+  color: #ffffff;
+  text-align: left;
+  font: 600 16px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 1273px;
+  top: 3778px;
+}
+.vehicle2 {
+  color: #ffffff;
+  text-align: left;
+  font: 600 16px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 1273px;
+  top: 3836px;
+}
+.tentang-kami2 {
+  color: #ffffff;
+  text-align: left;
+  font: 600 16px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 1273px;
+  top: 3894px;
+}
+.layanan2 {
+  color: #ffffff;
+  text-align: left;
+  font: 600 16px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 1273px;
+  top: 3952px;
+}
+.kontak {
+  color: #ffffff;
+  text-align: left;
+  font: 600 16px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 1612px;
+  top: 3778px;
+}
+.facebook {
+  color: #ffffff;
+  text-align: left;
+  font: 600 16px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 1612px;
+  top: 3836px;
+}
+.instagram {
+  color: #ffffff;
+  text-align: left;
+  font: 600 16px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 1612px;
+  top: 3894px;
+}
+.twitter {
+  color: #ffffff;
+  text-align: left;
+  font: 600 16px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 1612px;
+  top: 3952px;
+}
+.vector {
+  position: absolute;
+  left: 294px;
+  top: 3961px;
+  overflow: visible;
+}
+.vector2 {
+  position: absolute;
+  left: 428px;
+  top: 3961px;
+  overflow: visible;
+}
+.ig-1-1 {
+  width: 26px;
+  height: 26px;
+  position: absolute;
+  left: 159px;
+  top: 3959px;
+}
+.frame-7 {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 581px;
+  top: 1185px;
+}
+.group-3 {
+  flex-shrink: 0;
+  width: 84px;
+  height: 33px;
+  position: static;
+}
+.vehicle3 {
+  color: #ff4869;
+  text-align: left;
+  font: 900 24px "Nunito", sans-serif;
+  position: absolute;
+  left: 333px;
+  top: 0px;
+}
+.pilih-mobil-yang-kamu-suka {
+  color: #000000;
+  text-align: center;
+  font: 800 48px "Nunito Sans", sans-serif;
+  position: relative;
+}
+.kami-menyediakan-banyak-mobil-yang-bisa-dipilih-dan-disediakan {
+  color: #000000;
+  text-align: center;
+  font: 800 16px "Nunito Sans", sans-serif;
+  position: relative;
+}
+.frame-5 {
+  display: flex;
+  flex-direction: row;
+  gap: 92px;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 236px;
+  top: 1440px;
+}
+.frame-1 {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 75px 26px 75px 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 63px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  height: 402px;
+  position: relative;
+  box-shadow: 0px 4px 32px -3px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.rocky2 {
+  flex-shrink: 0;
+  width: 241px;
+  height: 136px;
+  position: relative;
+}
+.daihatsu-rocky {
+  color: #000000;
+  text-align: left;
+  font: 500 24px "Plus Jakarta Sans", sans-serif;
+  position: relative;
+}
+.frame-2 {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 75px 18px 75px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0px 4px 32px -3px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.sigera2 {
+  flex-shrink: 0;
+  width: 257px;
+  height: 181px;
+  position: relative;
+  transform-origin: 0 0;
+  transform: rotate(0deg) scale(-1, 1);
+}
+.daihatsu-sigera {
+  color: #000000;
+  text-align: left;
+  font: 500 24px "Plus Jakarta Sans", sans-serif;
+  position: relative;
+}
+.frame-3 {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 75px 0px 75px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0px 4px 32px -3px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.all-new-sirion {
+  flex-shrink: 0;
+  width: 289px;
+  height: 167px;
+  position: relative;
+}
+.all-new-sirion2 {
+  color: #000000;
+  text-align: left;
+  font: 500 24px "Plus Jakarta Sans", sans-serif;
+  position: relative;
+}
+.frame-4 {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 75px 5px 75px 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0px 4px 32px -3px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.all-new-ayla {
+  flex-shrink: 0;
+  width: 280px;
+  height: 167px;
+  position: relative;
+}
+.all-new-ayla2 {
+  color: #000000;
+  text-align: left;
+  font: 500 24px "Plus Jakarta Sans", sans-serif;
+  position: relative;
+}
+.rectangle-9 {
+  background: #111a39;
+  width: 1955px;
+  height: 496px;
+  position: absolute;
+  left: -11px;
+  top: 3127px;
+}
+.frame-8 {
+  background: #e71d4f;
+  border-radius: 15px;
+  padding: 16px 29px 16px 29px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 129px;
+  top: 3460px;
+  overflow: hidden;
+}
+.lihat-selengkapnya2 {
+  color: #ffffff;
+  text-align: left;
+  font: 800 20px "Nunito Sans", sans-serif;
+  position: relative;
+}
+.vector-5 {
+  position: absolute;
+  left: 1237px;
+  top: 3220px;
+  overflow: visible;
+}
+.kami-percaya-bahwa-kepuasan-pelanggan-adalah-prioritas-utama-oleh-karena-itu-kami-menawarkan-layanan-purna-jual-yang-lengkap-tim-layanan-kami-yang-terampil-dan-berpengalaman-akan-menjaga-mobil-anda-tetap-dalam-kondisi-prima {
+  color: #ffffff;
+  text-align: left;
+  font: 700 20px "Nunito Sans", sans-serif;
+  position: absolute;
+  left: 129px;
+  top: 3328px;
+  width: 878px;
+}
+.layanan3 {
+  width: 784px;
+  height: 410px;
+  position: absolute;
+  left: 1047px;
+  top: 3170px;
+}
+.layanan4 {
+  color: #ffffff;
+  text-align: left;
+  font: 900 48px "Nunito Sans", sans-serif;
+  text-decoration: underline;
+  position: absolute;
+  left: 129px;
+  top: 3233px;
+}
