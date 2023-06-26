@@ -12,11 +12,11 @@
   
 </body>
 </html>
-<footer id="footer" class="bg-black py-12">
-  <div class="flex justify-between container mx-auto px-10">
+<footer id="footer" class="bg-black py-12 ">
+  <div class="flex justify-between container mx-auto px-10 w-10/12">
     <div class="w-3/12 flex flex-col gap-9">
       <img width="173" src="./img/Logo.png" alt="">
-      <p class="text-white">Kunjungi Daihatsu Mobil Dealer kami hari ini dan temukan mobil impian Anda. Dengan kami, Anda akan merasakan kehangatan dan keramahan layanan kami yang membuat Anda merasa seperti keluarga.</p>
+      <p class="text-[12px] text-white">Kunjungi Daihatsu Mobil Dealer kami hari ini dan temukan mobil impian Anda. Dengan kami, Anda akan merasakan kehangatan dan keramahan layanan kami yang membuat Anda merasa seperti keluarga.</p>
       <div class="flex">
       <img class="mr-10" src="./img/ig_1.png" alt="">
       <img class="mr-10" src="./img/twiter.png" alt="">
@@ -26,18 +26,18 @@
     </div>
   <div class="flex text-white gap-9 mr-11">
       <div class="flex flex-col gap-6">
-        <h4 class="font-bold">About Us</h4>
-        <a href="">Halaman Utama</a>
-        <a href="">Vehicle</a>
-        <a href="">Tentang Kami</a>
-        <a href="">Layanan</a>
+        <h4 class="font-extrabold">About Us</h4>
+        <a class="text-[12px]" href="">Halaman Utama</a>
+        <a class="text-[12px]" href="">Vehicle</a>
+        <a class="text-[12px]" href="">Tentang Kami</a>
+        <a class="text-[12px]" href="">Layanan</a>
       </div>
       <div class="flex flex-col gap-6">
-        <h4 class="font-bold">Hubungi</h4>
-        <a href="">Kontak</a>
-        <a href="">Facebook</a>
-        <a href="">Instagram</a>
-        <a href="">Twitter</a>
+        <h4 class="font-extrabold">Hubungi</h4>
+        <a class="text-[12px]" href="">Kontak</a>
+        <a class="text-[12px]" href="">Facebook</a>
+        <a class="text-[12px]" href="">Instagram</a>
+        <a class="text-[12px]" href="">Twitter</a>
       </div>
   </div>
 

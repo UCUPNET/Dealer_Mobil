@@ -12,16 +12,16 @@
   
 </body>
 </html>
-<header id='header' class="w-full border-b fixed z-20 bg-white">
-    <div class="container mx-auto flex items-center justify-between h-20">
+<header id='header' class="w-full border-b fixed z-20 bg-white ">
+    <div class="container mx-auto flex items-center justify-between h-20 w-10/12">
       <div id="logo" class="pull-left">
         <a class="text-xl font-semibold" href="index.php">
-        <img src="img/logo.png" alt="" title="" width="200" height="auto" />
+        <img src="img/logo.png" alt="" title="" width="150" height="auto" />
         </a>
       </div>
         <div class="flex items-center justify-between space-x-6">
             <a class="text-base menu-active" href="index.php">Beranda</a>
-            <a class="text-base menu-active" href="index.php">Vehicle</a>
+            <a class="text-base menu-active" href="vehicle.php">Vehicle</a>
             <a class="text-base " href="about.php">Tentang Kami</a>
             <a class="text-base " href="services.php">Layanan</a>
             <a class="text-base " href="contact.php">Kontak Kami</a>
