@@ -54,14 +54,16 @@ function getTransaksiData() {
 }
 
 // Fungsi untuk menambahkan data ke tabel transaksi
-function tambahTransaksiData($id_pelanggan, $id_mobil, $tanggal, $harga) {
+function tambahTransaksiData($id_pelanggan, $id_mobil, $tanggal, $harga, $gambar) {
     global $conn;
     $id_pelanggan = mysqli_real_escape_string($conn, $id_pelanggan);
     $id_mobil = mysqli_real_escape_string($conn, $id_mobil);
     $tanggal = mysqli_real_escape_string($conn, $tanggal);
     $harga = mysqli_real_escape_string($conn, $harga);
+    $gambar = mysqli_real_escape_string($conn, $gambar);
 
-    $query = "INSERT INTO transaksi (id_pelanggan, id_mobil, tanggal, harga) VALUES ('$id_pelanggan', '$id_mobil', '$tanggal', '$harga')";
+    $query = "INSERT INTO transaksi (id_pelanggan, id_mobil, tanggal, harga, gambar) VALUES ('$id_pelanggan', '$id_mobil', '$tanggal', '$harga', '$gambar')";
+    echo $query; die();
     mysqli_query($conn, $query);
 }
 
@@ -93,7 +95,14 @@ if (isset($_POST['tambah_transaksi'])) {
     $id_mobil = $_POST['id_mobil'];
     $tanggal = $_POST['tanggal'];
     $harga = $_POST['harga'];
-    tambahTransaksiData($id_pelanggan, $id_mobil, $tanggal, $harga);
+    $gambar = $_FILES['gambar'];
+
+    if(!isset($gambar)){
+        die('No File Uploaded.');
+    }
+    move_uploaded_file($gambar['tmp_name'], './img/vehicleimages/' .$gambar['name']);
+
+    tambahTransaksiData($id_pelanggan, $id_mobil, $tanggal, $harga, $gambar['name']);
     header('Location: dashboard.php');
     exit();
 }
@@ -128,7 +137,6 @@ $data_transaksi = getTransaksiData();
 <html>
 <head>
     <title>Dashboard</title>
-    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <h1>Data Mobil</h1>
@@ -141,7 +149,7 @@ $data_transaksi = getTransaksiData();
         <?php foreach ($data_mobil as $row): ?>
         <tr>
             <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['merek']; ?></td>
+            <td><?php echo $row['merk']; ?></td>
             <td><?php echo $row['model']; ?></td>
         </tr>
         <?php endforeach; ?>
@@ -189,7 +197,7 @@ $data_transaksi = getTransaksiData();
     </table>
 
     <h2>Tambah Data Transaksi</h2>
-    <form action="dashboard.php" method="POST">
+    <form action="dashboard.php" method="POST" enctype="multipart/form-data">
         <label for="id_pelanggan">ID Pelanggan:</label>
         <input type="text" id="id_pelanggan" name="id_pelanggan" required><br>
 
@@ -201,6 +209,9 @@ $data_transaksi = getTransaksiData();
 
         <label for="harga">Harga:</label>
         <input type="text" id="harga" name="harga" required><br>
+
+        <label for="Foto">Gambar:</label>
+        <input type="file" id="Gambar" name="gambar" required><br>
 
         <input type="submit" name="tambah_transaksi" value="Tambah">
     </form>

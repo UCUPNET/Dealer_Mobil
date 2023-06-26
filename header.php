@@ -28,7 +28,7 @@
         </div>
 
         <div>
-          <a class = "px-5 py-1 rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="login.php">Login</a>
+          <a class = "px-5 py-1 rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="loginpage.php">Login</a>
           <a class = "px-5 py-1 rounded-lg font-bold  text-[#E71D4F]" href="signup.php">Register</a>
         </div>
     </div>
