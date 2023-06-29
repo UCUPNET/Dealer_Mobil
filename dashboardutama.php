@@ -63,7 +63,6 @@ function tambahTransaksiData($id_pelanggan, $id_mobil, $tanggal, $harga, $gambar
     $gambar = mysqli_real_escape_string($conn, $gambar);
 
     $query = "INSERT INTO transaksi (id_pelanggan, id_mobil, tanggal, harga, gambar) VALUES ('$id_pelanggan', '$id_mobil', '$tanggal', '$harga', '$gambar')";
-    echo $query; die();
     mysqli_query($conn, $query);
 }
 
@@ -193,9 +192,9 @@ $data_transaksi = getTransaksiData();
               <h2
                 class="font-medium text-xs md:text-sm text-center text-teal-500"
               >
-                Eduard Pantazi
+                Ucup
               </h2>
-              <p class="text-xs text-gray-500 text-center">Administrator</p>
+              <p class="text-xs text-gray-500 text-center">User</p>
             </div>
           </div>
           <div

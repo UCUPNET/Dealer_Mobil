@@ -27,9 +27,9 @@
   <div class="flex text-white gap-9 mr-11">
       <div class="flex flex-col gap-6">
         <h4 class="font-extrabold">About Us</h4>
-        <a class="text-[12px]" href="">Halaman Utama</a>
-        <a class="text-[12px]" href="">Vehicle</a>
-        <a class="text-[12px]" href="">Tentang Kami</a>
+        <a class="text-[12px]" href="index.php">Halaman Utama</a>
+        <a class="text-[12px]" href="vehicle.php">Vehicle</a>
+        <a class="text-[12px]" href="about.php">Tentang Kami</a>
         <a class="text-[12px]" href="">Layanan</a>
       </div>
       <div class="flex flex-col gap-6">

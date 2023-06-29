@@ -24,7 +24,7 @@ function login($username, $password) {
     if ($user) {
         session_start();
         $_SESSION['username'] = $user['username'];
-        header('Location: dashboard.php');
+        header('Location: dashboardutama.php');
         exit();
     } else {
         return false;
@@ -48,7 +48,7 @@ if (isset($_POST['login'])) {
     <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body background="img/aboutus.jpg">
     <h1>Login</h1>
     <form action="login.php" method="POST">
         <label for="username">Username:</label>

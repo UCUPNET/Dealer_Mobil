@@ -2,7 +2,23 @@
 session_start();
 include('config.php');
 error_reporting(0);
+function getMobilData() {
+  global $conn;
+  $query = "SELECT * from mobil limit 4";
+  $result = mysqli_query($conn, $query);
+
+  $data = array();
+  while ($row = mysqli_fetch_assoc($result)) {
+      $data[] = $row;
+  }
+
+  return $data;
+}
+
+$data_mobil = getMobilData();
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -44,7 +60,7 @@ error_reporting(0);
     </div>
   </section>
   <section class="container mx-auto  px-10 mt-20">
-    <div class="text-center gap-4 flex flex-col">
+  <div class="text-center gap-4 flex flex-col">
       <h5 class="font-bold text-[24px] text-[#E71D4F]">Vehicle</h5>
       <h3 class="font-extrabold text-[48px] text-black text-2xl">PILIH MOBIL YANG KAMU SUKA</h3>
       <p clas="">Kami menyediakan banyak mobil yang bisa
@@ -52,28 +68,13 @@ error_reporting(0);
     </div>
     <div class="w-10/12 mx-auto mt-10">
       <div class="flex justify-between">
+      <?php foreach ($data_mobil as $row): ?>
         <div class="flex w-56 flex-col justify-center items-center px-7 py-12 shadow-lg gap-5">
-          <img width="200" src="./img/Rocky.png" alt="">
-          <p class="text-[#787878] text-center">Daihatsu Rocky</p>
+          <img width="200" src="./img/<?= $row['gambar']; ?>" alt="">
+          <p class="text-[#787878] text-center"><?php echo $row['model']; ?></p>
         </div>
-        <div class="flex w-56 flex-col justify-center items-center px-7 py-12 shadow-lg gap-5">
-          <img width="200" src="./img/Sigera.png" alt="">
-          <p class="text-[#787878] text-center">Daihatsu Sigera</p>
-        </div>
-        <div class="flex w-56 flex-col justify-center items-center px-7 py-12 shadow-lg gap-5">
-          <img width="200" src="./img/All_new_sirion.png" alt="">
-          <p class="text-[#787878] text-center">All New Sirion</p>
-        </div>
-        <div class="flex w-56 flex-col justify-center items-center px-7 py-12 shadow-lg gap-5">
-          <img width="200" src="./img/All_new_Alya.png" alt="">
-          <p class="text-[#787878] text-center">All New Ayla</p>
-        </div>
+      <?php endforeach; ?>
       </div>
-      <div class="mt-10 px-6 py-2 text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]">
-        <a class="" href="">Lihat
-          Selengkapnya</a>
-      </div>
-    </div>
   </section>
 
   <section class="container w-10/12 mx-auto mt-24 ">
@@ -99,7 +100,7 @@ error_reporting(0);
           jual yang lengkap. Tim layanan kami yang terampil dan berpengalaman akan menjaga mobil Anda tetap dalam
           kondisi
           prima</p>
-        <a class="px-6 py-2 w-6/12 text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="">Lihat
+        <a class="px-6 py-2 w-6/12 text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="halamanlayanan.php">Lihat
           Selengkapnya</a>
       </div>
       <div>

@@ -21,7 +21,7 @@
 ">
     <div class="flex container mx-auto px-10 justify-between">
       <h2 class="text-6xl font-bold text-white">Who <br>We Are</h2>
-      <div><img width="330" src="./img/Logo.png" alt=""></div>
+      <div><img width="330" src="./img/Logo.png" alt="Daihatsu Logo"></div>
     </div>
   </section>
   <section class="bg-[#E71D4F]">

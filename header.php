@@ -23,7 +23,6 @@
             <a class="text-base menu-active" href="index.php">Beranda</a>
             <a class="text-base menu-active" href="vehicle.php">Vehicle</a>
             <a class="text-base " href="about.php">Tentang Kami</a>
-            <a class="text-base " href="services.php">Layanan</a>
             <a class="text-base " href="contact.php">Kontak Kami</a>
         </div>
 

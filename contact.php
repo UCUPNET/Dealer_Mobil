@@ -2,6 +2,32 @@
 session_start();
 include('config.php');
 error_reporting(0);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+
+    // Simpan pesan ke database atau file teks, sesuaikan dengan kebutuhan Anda
+    // Contoh menggunakan file teks untuk penyimpanan
+    $file = 'pesan.txt';
+    $content = "Nama: $name\nEmail: $email\nSubjek: $subject\nPesan: $message\n\n";
+
+    // Tambahkan pesan ke file teks
+    file_put_contents($file, $content, FILE_APPEND);
+
+    // Kirim email ke alamat tujuan, sesuaikan dengan kebutuhan Anda
+    // Contoh menggunakan fungsi mail() PHP
+    $to = 'tujuan@example.com';
+    $subjectEmail = "Pesan Kontak dari $name";
+    $messageEmail = "Nama: $name\nEmail: $email\nSubjek: $subject\nPesan: $message";
+
+    mail($to, $subjectEmail, $messageEmail);
+
+    // Redirect ke halaman "terima kasih" atau halaman lain yang sesuai
+    header("Location: thank_you.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -61,9 +87,9 @@ error_reporting(0);
           <div class="w-full lg:w-1/3">
             <div class="bg-white shadow p-6 rounded-lg mb-6">
               <h3 class="text-xl font-semibold mb-4">Informasi Kontak</h3>
-              <p>Jalan Raya No. 123<br>Kota Anda, Negara Anda</p>
-              <p><strong>Telepon:</strong> +123456789</p>
-              <p><strong>Email:</strong> info@example.com</p>
+              <p>Jalan Raya Serang No. 12<br>Serang, Indonesia</p>
+              <p><strong>Telepon:</strong> +0271592772</p>
+              <p><strong>Email:</strong> DaihatsuSerang@gmail.com</p>
               <div class="social-links mt-4">
                 <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
                 <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
@@ -85,7 +111,7 @@ error_reporting(0);
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- JavaScript -->
-  <script src="lib/jquery/jquery.min.js"></script>
+  <!-- <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
   <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="lib/easing/easing.min.js"></script>
@@ -97,7 +123,7 @@ error_reporting(0);
   <script src="lib/sticky/sticky.js"></script>
   <script src="contact/jqBootstrapValidation.js"></script>
   <script src="contact/contact_me.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/main.js"></script> -->
 
 </body>
 
