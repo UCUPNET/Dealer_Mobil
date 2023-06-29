@@ -10,7 +10,8 @@ error_reporting(0);
 <head>
   <meta charset="utf-8">
   <title>Dealer Mobil | Layanan</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
+    <script src="https://cdn.tailwindcss.com"></script>
   <meta content="" name="keywords">
   <meta content="" name="description">
   <meta content="Author" name="WebThemez">

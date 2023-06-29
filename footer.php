@@ -2,7 +2,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Footer</title>
+  <title>Footer</title> 
+    <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="dist/output.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +14,7 @@
 </body>
 </html>
 <footer id="footer" class="bg-black py-12 ">
-  <div class="flex justify-between container mx-auto px-10 w-10/12">
+  <div class="flex justify-between container mx-auto px-20 gap-20 ">
     <div class="w-3/12 flex flex-col gap-9">
       <img width="173" src="./img/Logo.png" alt="">
       <p class="text-[12px] text-white">Kunjungi Daihatsu Mobil Dealer kami hari ini dan temukan mobil impian Anda. Dengan kami, Anda akan merasakan kehangatan dan keramahan layanan kami yang membuat Anda merasa seperti keluarga.</p>

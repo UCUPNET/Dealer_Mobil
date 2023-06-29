@@ -50,7 +50,7 @@ $data_mobil = getMobilData();
                 <img width="200" src="./img/<?= $row['gambar']; ?>" alt="">
                 <p class="text-[#787878] text-center"><?php echo $row['model']; ?></p>
                 <p class="text-[#E71D4F] font-extrabold text-center">Rp<?php echo $row['harga']; ?></p>
-                <a class="px-6 py-2  text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="">Lihat
+                <a class="px-6 py-2  text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="cardetail.php">Lihat
                     Selengkapnya</a>
             </div>
         <?php endforeach; ?>

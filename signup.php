@@ -39,6 +39,7 @@ if (isset($_POST['signup'])) {
 <head>
     <title>Sign Up</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="dist/output.css">
 </head>
 <body>
 <section style="background : url('./img/Background_belakang.jpg') no-repeat fixed center; background-size: cover;" class="bg-gray-50 dark:bg-gray-900">
