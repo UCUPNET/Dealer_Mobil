@@ -19,7 +19,9 @@ error_reporting(0);
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+    rel="stylesheet">
 
   <!-- Tailwind CSS File -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -30,59 +32,39 @@ error_reporting(0);
   <?php include('header.php');?>
 
   <main id="main">
-    <section id="contact" class="pt-32 wow fadeInUp">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="w-full lg:w-2/3">
-            <div class="bg-white shadow p-6 rounded-lg mb-6">
-              <h3 class="text-xl font-semibold mb-4">Formulir Kontak</h3>
-              <form action="#" method="post" role="form" class="php-email-form">
-                <div class="flex flex-wrap mb-4">
-                  <div class="w-full md:w-1/2">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Nama Anda" required>
-                  </div>
-                  <div class="w-full md:w-1/2 mt-2 md:mt-0">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email Anda" required>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subjek" required>
-                </div>
-                <div class="form-group">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Pesan Anda" required></textarea>
-                </div>
-                <div class="text-center">
-                  <button type="submit" class="btn btn-primary">Kirim Pesan</button>
-                </div>
-              </form>
-            </div>
-          </div>
+    
+    <section  id="contact" class="pt-32 container mx-auto ">
 
-          <div class="w-full lg:w-1/3">
-            <div class="bg-white shadow p-6 rounded-lg mb-6">
-              <h3 class="text-xl font-semibold mb-4">Informasi Kontak</h3>
-              <p>Jalan Raya No. 123<br>Kota Anda, Negara Anda</p>
-              <p><strong>Telepon:</strong> +123456789</p>
-              <p><strong>Email:</strong> info@example.com</p>
-              <div class="social-links mt-4">
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
+      <div class="flex flex-col min-h-screen justify-between w-6/12 mx-auto py-20 space-y-9 shadow-2xl p-5 w-50% " >
+        
+        <div class="text-center font-extrabold">
+          <h2 class="font-extrabold">Isi From Berikut</h2>
+          <p>Kami Akan Segera mengirim email kepada Anda</p>
         </div>
+
+        <div class="text-[#787878] flex flex-col justify-between mx-auto w-full space-y-5">
+          <input class="border  border-[#787878]-200" placeholder="Nama">
+          <input class="border  border-[#787878]-200" placeholder="Pilih Jenis Kelamin">
+          <input class="border  border-[#787878]-200" placeholder="Pilih Kota">
+          <input class="border  border-[#787878]-200" placeholder="Pilih Mobil">
+          <input class="border  border-[#787878]-200" placeholder="Alamat">
+          <input class="border  border-[#787878]-200" placeholder="No Telp">
+          <input class="border  border-[#787878]-200" placeholder="Pilih Kategori">
+          <input class="border  border-[#787878]-200" placeholder="Email">
+          <input class="border  border-[#787878]-200" placeholder="Pesan">
+        </div>
+        <div class="w-full text-center py-14">
+          <button class="px-32 py-2 bg-[#E71D4F] text-[#FFFFFF] rounded-lg"><a class=" w-full text-center  font-bold  mx-auto" href="">Kirim</a></button>
+        </div>
+      </div>
       </div>
     </section><!-- #Contact -->
 
   </main>
 
-  
+
 
   <?php include('footer.php');?>
-
-  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- JavaScript -->
   <script src="lib/jquery/jquery.min.js"></script>

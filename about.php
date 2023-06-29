@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Document</title>  
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="dist/output.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,15 +18,15 @@
 
   <!-- Page Content -->
 
-  <section id="about" class="pt-56 pb-36" style="background : url('./img/bg_aboutus.jpg') no-repeat fixed center; background-size: cover;
+  <section id="about" class="pt-56 pb-36" style="background : url('./img/bg_aboutus.jpg') no-repeat fixed center; background-size: cover px-20 ;
 ">
-    <div class="flex container mx-auto px-10 justify-between">
+    <div class="flex container mx-auto px-10 justify-between px-20 ">
       <h2 class="text-6xl font-bold text-white">Who <br>We Are</h2>
       <div><img width="330" src="./img/Logo.png" alt=""></div>
     </div>
   </section>
   <section class="bg-[#E71D4F]">
-    <div class="container mx-auto px-10 py-12 flex justify-between text-white ">
+    <div class="container mx-auto px-10 py-12 flex justify-between text-white px-20  ">
       <div class="flex items-center justify-center">
         <h4 class="font-bold text-3xl ">About Us</h4>
       </div>
@@ -40,7 +41,7 @@
     </div>
   </section>
   <section>
-    <div class="container mx-auto px-10 text-center py-11 gap-11 flex flex-col">
+    <div class="container mx-auto px-10 text-center py-11 gap-11 flex flex-col px-20 ">
       <h4 class="font-bold text-3xl ">Layanan Kami</h4>
       <div class="flex justify-between">
         <div class="flex w-56 flex-col justify-center items-center px-7 py-12 shadow-lg gap-5">
@@ -64,7 +65,7 @@
     </div>
   </section>
   <section class="bg-[#E71D4F]">
-    <div class="container mx-auto px-10 py-12 flex justify-between text-white ">
+    <div class="container mx-auto px-10 py-12 flex justify-between text-white px-20  ">
       <p class="text-lg">Dalam beberapa tahun terakhir, Daihatsu telah berfokus pada pengembangan mobil listrik dan
         teknologi ramah lingkungan lainnya. Mereka telah memperkenalkan beberapa model mobil listrik dan berusaha
         mengurangi jejak karbon melalui penggunaan bahan-bahan ramah lingkungan dalam produksi mobil
@@ -75,8 +76,8 @@
         barang di kota-kota besar.</p>
     </div>
   </section>
-  <section class="container mx-auto px-10 py-10">
-    <h4 class="font-bold text-3xl text-center pb-10">Galeri</h4>
+  <section class="container mx-auto px-10 py-10 px-20 ">
+    <h4 class="font-bold text-3xl text-center pb-10 ">Galeri</h4>
     <div>
       <img src="./img/galeri.png" alt="">
     </div>

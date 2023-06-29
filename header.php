@@ -2,7 +2,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Document</title> 
+    <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="dist/output.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,7 +14,7 @@
 </body>
 </html>
 <header id='header' class="w-full border-b fixed z-20 bg-white ">
-    <div class="container mx-auto flex items-center justify-between h-20 w-10/12">
+    <div class="container mx-auto flex items-center justify-between px-20  h-20 w-10/12">
       <div id="logo" class="pull-left">
         <a class="text-xl font-semibold" href="index.php">
         <img src="img/logo.png" alt="" title="" width="150" height="auto" />
@@ -23,7 +24,6 @@
             <a class="text-base menu-active" href="index.php">Beranda</a>
             <a class="text-base menu-active" href="vehicle.php">Vehicle</a>
             <a class="text-base " href="about.php">Tentang Kami</a>
-            <a class="text-base " href="services.php">Layanan</a>
             <a class="text-base " href="contact.php">Kontak Kami</a>
         </div>
 

@@ -12,7 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <!DOCTYPE html>
 <html>
-<head>
+<head>  
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Fitur Finansial dan Pembayaran</title>
 </head>
 <body>
