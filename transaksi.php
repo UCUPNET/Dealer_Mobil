@@ -3,6 +3,8 @@ session_start();
 include('config.php');
 error_reporting(0);
 
+$id = $_GET['id'];
+
 $host = 'localhost';
 $db   = 'dealer_mobil';
 $user = 'root';
@@ -17,7 +19,7 @@ try {
 }
 
 // Ambil daftar mobil
-$query = $conn->query("SELECT * FROM mobil limit 1");
+$query = $conn->query("SELECT * FROM mobil WHERE id=$id");
 $mobil = $query->fetchAll(PDO::FETCH_ASSOC);
 
 // Proses form transaksi
@@ -82,14 +84,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <?php include('header.php');?>
 
     <section class="container w-10/12 mx-auto py-20 px-20 ">
-    <form method="post" action="">
+    
         <div class="mb-7">
             <h2 class="font-extrabold text-4xl mb-10 mt-10">Transaksi</h2>
         </div>
     <div class="shadow-lg flex rounded-md mx-auto justify-center gap-9 p-10">
         <div class="flex flex-col gap-8 border-r-2 text-xs">
             <div class="flex justify-center pt-10 pb-10 ">
-                <img class="w-2/3 " src="./img/Rocky.png" alt="">
+             <?php foreach ($mobil as $m) : ?>
+                <img class="w-2/3 " src="./img/<?= $m['gambar']; ?>" alt="">
+             <?php endforeach; ?>
             </div>
             <h3 class="font-extrabold text-black">Informasi Mobil</h3>
             <div class="flex justify-between mb-10">
@@ -130,29 +134,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
         </div>
         <div class="flex flex-col justify-between">
-            <h3 class="font-extrabold text-3xl ">Daihatsu Rocky 
-                <br>(2021)</h3>
-            
+            <h3 class="font-extrabold text-3xl "><?= $m['merk'] . ' ' . $m['model']; ?>
+                <br><?= $m['tahun_produksi']; ?></h3>
+                <form method="post" action="" id="trans">
                 <div class="flex gap-14 mt-5">
                     <div class="flex flex-col gap-5  ">
-                    <label for="mobil_id">Pilih Mobil:</label>
-                    <select id="mobil_id" name="mobil_id">
-                    <?php foreach ($mobil as $m) : ?>
-                        <option value="<?= $m['id']; ?>"><?= $m['merk'] . ' ' . $m['model']; ?></option>
-                    <?php endforeach; ?>
-                    </select><br>
-                        <label for="jumlah_beli">Jumlah Beli:</label>
-                         <input type="number" id="jumlah_beli" name="jumlah_beli" min="1" required><br>
+                        <label for="jumlah">Jumlah Beli:</label>
+                         <input type="number" id="jumlah" name="jumlah" min="1" onchange="hitungTotal()" required><br>
                          <?php foreach ($mobil as $m) : ?>
-                            <p>Harga :<?= $m['harga']; ?></p>
+                            <p>Harga :Rp. <?= number_format($m['harga']); ?></p>
+                            <input type="hidden" name="" id="harga" value="<?= $m['harga']; ?>">
                          <?php endforeach; ?>
+
                         <label for="nama_pembeli">Nama Pembeli:</label>
                         <input type="text" id="nama_pembeli" name="nama_pembeli" required><br>
                         <label for="tanggal_transaksi">Tanggal Transaksi:</label>
                         <input type="date" id="tanggal_transaksi" name="tanggal_transaksi" required><br>
-                        <?php 
-                            echo "Total harga: Rp" . $total_harga; 
-                         ?>
+                        <label for="tipe_pembayaran">Tipe Pembayaran</label>
+                        <select name="tipe_pembayaran" id="">
+                            <option value="1">Cash</option>
+                            <option value="2">Credit</option>
+                        </select>
+                        <label for="total">Total:</label>
+                        <span id="total"></span>
+                        
                     </div>
                     <div class="font-bold text-black flex flex-col gap-5 w-6/12 ">
                         <!-- <input placeholder="-Input Nama-"> 
@@ -166,11 +171,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <a class="px-6 py-2 w-full mb-16 mt-5 inline-block text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="transaksi.php">Beli
                         Sekarang</a>
                 </div>
-            
+                </form>
         </div>
     </div>
     </section>
     <?php include('footer.php');?>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  // Fungsi untuk menghitung total
+  function hitungTotal() {
+    var harga = parseInt($("#harga").val());
+    var jumlah = parseInt($("#jumlah").val());
+
+    // Periksa jika input kosong atau bukan angka
+    if (isNaN(harga) || isNaN(jumlah)) {
+      $("#total").text("");
+    } else {
+      var data = {
+        harga: harga,
+        jumlah: jumlah
+      };
+
+      $.ajax({
+        url: "input_harga.php", // Ganti dengan URL yang sesuai
+        method: "POST",
+        data: data,
+        success: function(response) {
+          $("#total").text(response);
+        },
+        error: function(xhr, status, error) {
+          console.error(error);
+        }
+      });
+    }
+  }
+</script>
+
 </body>
 
 </html>

@@ -2,10 +2,11 @@
 session_start();
 include('config.php');
 error_reporting(0);
+$id = $_GET['id'];
 
-function getMobilData() {
+function getMobilData($id) {
     global $conn;
-    $query = "SELECT * from mobil limit 1";
+    $query = "SELECT * from mobil WHERE id=$id";
     $result = mysqli_query($conn, $query);
   
     $data = array();
@@ -16,7 +17,7 @@ function getMobilData() {
     return $data;
   }
   
-  $data_mobil = getMobilData();
+  $data_mobil = getMobilData($id);
 ?>
 
 <!DOCTYPE html>
@@ -93,7 +94,7 @@ function getMobilData() {
                     <h3 class="font-bold"><?= $row['merk'] . ' ' . $row['model'] . ' ' . $row['tahun_produksi']; ?></h3>
                     <p class="text-[#E71D4F] font-extrabold">Rp<?php echo $row['harga']; ?></p>
                 </div>
-                <a class="px-6 py-2 w-full mb-16 mt-5 inline-block text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="transaksi.php">Beli
+                <a class="px-6 py-2 w-full mb-16 mt-5 inline-block text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="transaksi.php?id=<?= $id; ?>">Beli
                     Sekarang</a>
                 <div class="flex flex-col gap-8 ">
                     <h3 class="font-extrabold text-black">Informasi Mobil</h3>
