@@ -70,15 +70,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="text-[#787878] flex flex-col justify-between mx-auto w-full space-y-5">
           <form action="" method="post"></form>
-          <input type="text"class="border  border-[#787878]-200" placeholder="Nama">
-          <input type="gender" class="border  border-[#787878]-200" placeholder="Pilih Jenis Kelamin">
-          <input type="text" class="border  border-[#787878]-200" placeholder="Pilih Kota">
-          <input type="text" class="border  border-[#787878]-200" placeholder="Pilih Mobil">
-          <input type="text" class="border  border-[#787878]-200" placeholder="Alamat">
-          <input type="text" class="border  border-[#787878]-200" placeholder="No Telp">
-          <input type="text" class="border  border-[#787878]-200" placeholder="Pilih Kategori">
-          <input type="text" class="border  border-[#787878]-200" placeholder="Email">
-          <input type="text" class="border  border-[#787878]-200" placeholder="Pesan">
+          <input type="text"class="border  border-[#787878]-200" placeholder="Nama" required>
+          <input type="gender" class="border  border-[#787878]-200" placeholder=" Pilih Jenis Kelamin " required>
+          <input type="text" class="border  border-[#787878]-200" placeholder="Pilih Kota" required>
+          <input type="text" class="border  border-[#787878]-200" placeholder="Pilih Mobil" required>
+          <input type="text" class="border  border-[#787878]-200" placeholder="Alamat" required>
+          <input type="text" class="border  border-[#787878]-200" placeholder="No Telp" required>
+          <input type="text" class="border  border-[#787878]-200" placeholder="Pilih Kategori" required>
+          <input type="text" class="border  border-[#787878]-200" placeholder="Email" required>
+          <input type="text" class="border  border-[#787878]-200" placeholder="Pesan" required>
         </div>
         <div class="w-full text-center py-14">
           <button class="px-32 py-2 bg-[#E71D4F] text-[#FFFFFF] rounded-lg"><a class=" w-full text-center  font-bold  mx-auto" href="thank_you.php">Kirim</a></button>

@@ -1,3 +1,4 @@
+<!-- crud mobil -->
 <?php
 // Menghubungkan ke database
 $host = 'localhost';
@@ -11,6 +12,32 @@ if (!$conn) {
     die('Koneksi database gagal: ' . mysqli_connect_error());
 }
 
+function getPelangganData() {
+  global $conn;
+  $query = "SELECT * FROM pelanggan";
+  $result = mysqli_query($conn, $query);
+
+  $data = array();
+  while ($row = mysqli_fetch_assoc($result)) {
+      $data[] = $row;
+  }
+
+  return $data;
+}
+
+function tambah_data_Mobil($merk, $model, $harga, $gambar, $tahun_produksi, $deskripsi) {
+    global $conn;
+    $merk = mysqli_real_escape_string($conn, $merk);
+    $model = mysqli_real_escape_string($conn, $model);
+    $harga = mysqli_real_escape_string($conn, $harga);
+    $gambar = mysqli_real_escape_string($conn, $gambar);
+    $tahun_produksi = mysqli_real_escape_string($conn, $tahun_produksi);
+    $deskripsi = mysqli_real_escape_string($conn, $deskripsi);
+
+    $query = "INSERT INTO mobil (merk, model, harga, gambar, tahun_produksi, deskripsi) VALUES ('$merk', '$model', '$harga', '$gambar', '$tahun_produksi', '$deskripsi')";
+    // echo $query;die();
+    mysqli_query($conn, $query);
+}
 // Fungsi untuk mendapatkan data dari tabel mobil
 function getMobilData() {
     global $conn;
@@ -25,111 +52,29 @@ function getMobilData() {
     return $data;
 }
 
-// Fungsi untuk mendapatkan data dari tabel pelanggan
-function getPelangganData() {
-    global $conn;
-    $query = "SELECT * FROM pelanggan";
-    $result = mysqli_query($conn, $query);
-
-    $data = array();
-    while ($row = mysqli_fetch_assoc($result)) {
-        $data[] = $row;
-    }
-
-    return $data;
-}
-
-// Fungsi untuk mendapatkan data dari tabel transaksi
-function getTransaksiData() {
-    global $conn;
-    $query = "SELECT * FROM transaksi";
-    $result = mysqli_query($conn, $query);
-
-    $data = array();
-    while ($row = mysqli_fetch_assoc($result)) {
-        $data[] = $row;
-    }
-
-    return $data;
-}
-
-// Fungsi untuk menambahkan data ke tabel transaksi
-function tambahTransaksiData($id_pelanggan, $id_mobil, $tanggal, $harga, $gambar) {
-    global $conn;
-    $id_pelanggan = mysqli_real_escape_string($conn, $id_pelanggan);
-    $id_mobil = mysqli_real_escape_string($conn, $id_mobil);
-    $tanggal = mysqli_real_escape_string($conn, $tanggal);
-    $harga = mysqli_real_escape_string($conn, $harga);
-    $gambar = mysqli_real_escape_string($conn, $gambar);
-
-    $query = "INSERT INTO transaksi (id_pelanggan, id_mobil, tanggal, harga, gambar) VALUES ('$id_pelanggan', '$id_mobil', '$tanggal', '$harga', '$gambar')";
-    mysqli_query($conn, $query);
-}
-
-// Fungsi untuk mengubah data di tabel transaksi
-function ubahTransaksiData($id, $id_pelanggan, $id_mobil, $tanggal, $harga) {
-    global $conn;
-    $id = mysqli_real_escape_string($conn, $id);
-    $id_pelanggan = mysqli_real_escape_string($conn, $id_pelanggan);
-    $id_mobil = mysqli_real_escape_string($conn, $id_mobil);
-    $tanggal = mysqli_real_escape_string($conn, $tanggal);
-    $harga = mysqli_real_escape_string($conn, $harga);
-
-    $query = "UPDATE transaksi SET id_pelanggan='$id_pelanggan', id_mobil='$id_mobil', tanggal='$tanggal', harga='$harga' WHERE id='$id'";
-    mysqli_query($conn, $query);
-}
-
-// Fungsi untuk menghapus data dari tabel transaksi
-function hapusTransaksiData($id) {
-    global $conn;
-    $id = mysqli_real_escape_string($conn, $id);
-
-    $query = "DELETE FROM transaksi WHERE id='$id'";
-    mysqli_query($conn, $query);
-}
-
 // Proses tambah data transaksi
-if (isset($_POST['tambah_transaksi'])) {
-    $id_pelanggan = $_POST['id_pelanggan'];
-    $id_mobil = $_POST['id_mobil'];
-    $tanggal = $_POST['tanggal'];
+if (isset($_POST['tambah_data_mobil'])) {
+    $merk = $_POST['merk'];
+    $model = $_POST['model'];
     $harga = $_POST['harga'];
     $gambar = $_FILES['gambar'];
+    $tahun_produksi = $_POST['tahun_produksi'];
+    $deskripsi = $_POST['deskripsi'];
 
     if(!isset($gambar)){
         die('No File Uploaded.');
     }
-    move_uploaded_file($gambar['tmp_name'], './img/vehicleimages/' .$gambar['name']);
+    // print_r($_FILES); die();
+    move_uploaded_file($gambar['tmp_name'], '../img/vehicleimages/' .$gambar['name']);
 
-    tambahTransaksiData($id_pelanggan, $id_mobil, $tanggal, $harga, $gambar['name']);
-    header('Location: dashboard.php');
+    tambah_data_Mobil($merk, $model, $harga, $gambar['name'], $tahun_produksi, $deskripsi);
+    header('Location: index.php');
     exit();
 }
 
-// Proses ubah data transaksi
-if (isset($_POST['ubah_transaksi'])) {
-    $id = $_POST['id'];
-    $id_pelanggan = $_POST['id_pelanggan'];
-    $id_mobil = $_POST['id_mobil'];
-    $tanggal = $_POST['tanggal'];
-    $harga = $_POST['harga'];
-    ubahTransaksiData($id, $id_pelanggan, $id_mobil, $tanggal, $harga);
-    header('Location: dashboard.php');
-    exit();
-}
-
-// Proses hapus data transaksi
-if (isset($_GET['hapus_transaksi'])) {
-    $id = $_GET['hapus_transaksi'];
-    hapusTransaksiData($id);
-    header('Location: dashboard.php');
-    exit();
-}
-
-// Mengambil data dari tabel mobil, pelanggan, dan transaksi
+// Mengambil data dari tabel mobil, pelanggan
 $data_mobil = getMobilData();
 $data_pelanggan = getPelangganData();
-$data_transaksi = getTransaksiData();
 ?>
 
 
@@ -274,7 +219,7 @@ $data_transaksi = getTransaksiData();
                   clip-rule="evenodd"
                 ></path>
               </svg>
-              <span class="">Reports</span>
+              <span class="">CRUD</span>
             </a>
             <a
               href=""
@@ -366,74 +311,28 @@ $data_transaksi = getTransaksiData();
           </div>
         </div>
       </div>
-        <section>
-        <h1>Data Mobil</h1>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Merek</th>
-            <th>Model</th>
-        </tr>
+<section class="container mx-auto  px-10 mt-20" id=>
+  <div class="text-center gap-4 flex flex-col">
+      <h5 class="font-bold text-[24px] text-[#FF0000]">DATA MOBIL DAIHATSU</h5>
+      <h3 class="font-extrabold text-[48px] text-black text-2xl">DAFTAR MOBIL DAIHATSU</h3>
+      <p clas="">Daihatsu Sahabatku</p>
+    </div>
+        <div class="grid grid-cols-4 w-10/12 mx-auto gap-4 my-12 ">
         <?php foreach ($data_mobil as $row): ?>
-        <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['merk']; ?></td>
-            <td><?php echo $row['model']; ?></td>
-        </tr>
-        <?php endforeach; ?>
-    </table>
+            <div class="flex flex-col justify-center items-center px-7 py-12 shadow-lg gap-5 rounded-xl">
+                <img width="200" src="./img/<?= $row['gambar']; ?>" alt="">
+                <p class="text-[#787878] text-center"><?php echo $row['model']; ?></p>
+                <p class="text-[#E71D4F] font-extrabold text-center">Rp <?= number_format($row['harga']); ?></p>
+            </div>
+        <?php endforeach; ?>        
+      </div>
+    <h2>Tambah Data Mobil</h2>
+    <form action="index.php" method="POST" enctype="multipart/form-data">
+        <label for="merk">Merk:</label>
+        <input type="text" id="Merk" name="merk" required><br>
 
-    <h1>Data Pelanggan</h1>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Nama</th>
-            <th>Alamat</th>
-        </tr>
-        <?php foreach ($data_pelanggan as $row): ?>
-        <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['nama']; ?></td>
-            <td><?php echo $row['alamat']; ?></td>
-        </tr>
-        <?php endforeach; ?>
-    </table>
-
-    <h1>Data Transaksi</h1>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>ID Pelanggan</th>
-            <th>ID Mobil</th>
-            <th>Tanggal</th>
-            <th>Harga</th>
-            <th>Aksi</th>
-        </tr>
-        <?php foreach ($data_transaksi as $row): ?>
-        <tr>
-            <td><?php echo $row['id']; ?></td>
-            <td><?php echo $row['id_pelanggan']; ?></td>
-            <td><?php echo $row['id_mobil']; ?></td>
-            <td><?php echo $row['tanggal']; ?></td>
-            <td><?php echo $row['harga']; ?></td>
-            <td>
-                <a href="dashboard.php?hapus_transaksi=<?php echo $row['id']; ?>">Hapus</a>
-                <a href="edit_transaksi.php?id=<?php echo $row['id']; ?>">Ubah</a>
-            </td>
-        </tr>
-        <?php endforeach; ?>
-    </table>
-
-    <h2>Tambah Data Transaksi</h2>
-    <form action="dashboard.php" method="POST" enctype="multipart/form-data">
-        <label for="id_pelanggan">ID Pelanggan:</label>
-        <input type="text" id="id_pelanggan" name="id_pelanggan" required><br>
-
-        <label for="id_mobil">ID Mobil:</label>
-        <input type="text" id="id_mobil" name="id_mobil" required><br>
-
-        <label for="tanggal">Tanggal:</label>
-        <input type="date" id="tanggal" name="tanggal" required><br>
+        <label for="model">Model:</label>
+        <input type="text" id="Model" name="model" required><br>
 
         <label for="harga">Harga:</label>
         <input type="text" id="harga" name="harga" required><br>
@@ -441,8 +340,14 @@ $data_transaksi = getTransaksiData();
         <label for="Foto">Gambar:</label>
         <input type="file" id="Gambar" name="gambar" required><br>
 
-        <input type="submit" name="tambah_transaksi" value="Tambah">
+        <label for="Tahun_Produksi">Tahun Produksi:</label>
+        <input type="text" id="Tahun_Produksi" name="tahun_produksi" required><br>
+
+        <label for="Deskripsi">Deskripsi:</label>
+        <input type="text" id="Deskripsi" name="deskripsi" required><br>
+
+        <input type="submit" name="tambah_data_mobil" value="Tambah">
     </form>
-        </section>
+  </section>
     </div>
   </body>
