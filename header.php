@@ -28,8 +28,17 @@
         </div>
 
         <div>
+          <?php 
+            if(!$_SESSION['username']){
+          ?>
           <a class = "px-5 py-1 rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="loginpage.php">Login</a>
           <a class = "px-5 py-1 rounded-lg font-bold  text-[#E71D4F]" href="signup.php">Register</a>
+          
+          <?php } else{?>
+              <a class = "px-5 py-1 rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="logout.php">Logout</a>
+            <?php } ?>
+          
+
         </div>
     </div>
 </header>

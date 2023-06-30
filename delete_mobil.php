@@ -20,5 +20,5 @@ $id = mysqli_real_escape_string($conn, $id);
 $sql = "DELETE FROM mobil where id = '$id'";
 mysqli_query($conn, $sql);
 
-header('location:index.php');
+header('location:crud.php');
 mysqli_close($conn);

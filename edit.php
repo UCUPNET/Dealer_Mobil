@@ -28,7 +28,7 @@ if (isset($_POST['edit_data_mobil'])) {
         tahun_produksi='$tahun_produksi', deskripsi='$deskripsi' WHERE id = '$id'";
 
     mysqli_query($conn, $sql);
-    header('location:index.php');
+    header('location:crud.php');
     die();
 }
 
