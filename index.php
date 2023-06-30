@@ -25,7 +25,7 @@ $data_mobil = getMobilData();
 
 <head>
   <meta charset="utf-8">
-  <title>Dealer Mobil | Beranda</title> 
+  <title>Beranda</title> 
     <script src="https://cdn.tailwindcss.com"></script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
@@ -35,7 +35,7 @@ $data_mobil = getMobilData();
   <link
     href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
     rel="stylesheet">
-
+  <link rel="icon" href="img/iconlogo.png">
   <!-- Tailwind CSS File -->
 
   <link rel="stylesheet" href="dist/output.css">
@@ -101,7 +101,7 @@ $data_mobil = getMobilData();
           jual yang lengkap. Tim layanan kami yang terampil dan berpengalaman akan menjaga mobil Anda tetap dalam
           kondisi
           prima</p>
-        <a class="px-6 py-2 w-6/12 text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="halamanlayanan.php">Lihat
+        <a class="px-6 py-2 w-6/12 text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="vehicle.php">Lihat
           Selengkapnya</a>
       </div>
       <div>

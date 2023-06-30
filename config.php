@@ -18,4 +18,6 @@ date_default_timezone_set('Asia/Jakarta');
 
 // Konfigurasi lainnya
 define('SITE_URL', 'http://localhost/dealer-mobil'); // URL situs Anda
-define('SITE_NAME', 'Dealer Mobil'); // Nama situs Anda
+define('SITE_NAME', 'Daihatsu Serang'); // Nama situs Anda
+?>
+

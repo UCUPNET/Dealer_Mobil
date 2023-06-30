@@ -35,13 +35,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <head>
   <meta charset="utf-8">
-  <title>Dealer Mobil | Kontak</title>
+  <title>Kontak Kami</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
   <meta content="Author" name="WebThemez">
   <!-- Favicons -->
-  <link href="img/favicon.png" rel="icon">
+  <link rel="icon" href="img/iconlogo.png">
   <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->

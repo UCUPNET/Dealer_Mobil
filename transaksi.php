@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <head>
     <meta charset="utf-8">
-    <title>Dealer Mobil | Beranda</title>
+    <title>Transaksi</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
@@ -76,7 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         rel="stylesheet">
 
     <!-- Tailwind CSS File -->
-
+    <link rel="icon" href="img/iconlogo.png">
     <link rel="stylesheet" href="dist/output.css">
 </head>
 

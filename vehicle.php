@@ -23,7 +23,7 @@ $data_mobil = getMobilData();
 
 <head>
     <meta charset="utf-8">
-    <title>Dealer Mobil | Beranda</title>
+    <title>Vehicle</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -34,7 +34,7 @@ $data_mobil = getMobilData();
         rel="stylesheet">
 
     <!-- Tailwind CSS File -->
-
+    <link rel="icon" href="img/iconlogo.png">
     <link rel="stylesheet" href="dist/output.css">
 </head>
 
@@ -49,7 +49,7 @@ $data_mobil = getMobilData();
             <div class="flex flex-col justify-center items-center px-7 py-12 shadow-lg gap-5 rounded-xl">
                 <img width="200" src="./img/<?= $row['gambar']; ?>" alt="">
                 <p class="text-[#787878] text-center"><?php echo $row['model']; ?></p>
-                <p class="text-[#E71D4F] font-extrabold text-center">Rp<?php echo $row['harga']; ?></p>
+                <p class="text-[#E71D4F] font-extrabold text-center">Rp <?= number_format($row['harga']); ?></p>
                 <a class="px-6 py-2  text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="cardetail.php?id=<?= $row['id']; ?>">Lihat
                     Selengkapnya</a>
             </div>

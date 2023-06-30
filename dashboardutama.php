@@ -140,6 +140,8 @@ $data_transaksi = getTransaksiData();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="img/iconlogo.png">
+    <link rel="stylesheet" href="dist/output.css">
 </head>
 <body>
     

@@ -35,7 +35,7 @@ function getMobilData($id) {
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
         rel="stylesheet">
-
+    <link rel="icon" href="img/iconlogo.png">
     <!-- Tailwind CSS File -->
 
     <link rel="stylesheet" href="dist/output.css">
@@ -92,7 +92,7 @@ function getMobilData($id) {
                  </div>
                 <div class="flex justify-between py-5 border-b-2">
                     <h3 class="font-bold"><?= $row['merk'] . ' ' . $row['model'] . ' ' . $row['tahun_produksi']; ?></h3>
-                    <p class="text-[#E71D4F] font-extrabold">Rp<?php echo $row['harga']; ?></p>
+                    <p class="text-[#E71D4F] font-extrabold">Rp <?= number_format($row['harga']); ?></p>
                 </div>
                 <a class="px-6 py-2 w-full mb-16 mt-5 inline-block text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="transaksi.php?id=<?= $id; ?>">Beli
                     Sekarang</a>

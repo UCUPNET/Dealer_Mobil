@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>  
+  <title>Tentang Kami</title>  
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="img/iconlogo.png">
   <link rel="stylesheet" href="dist/output.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,7 +60,8 @@
         </div>
         <div class="flex w-56 flex-col justify-center items-center px-7 py-12 shadow-lg gap-5">
           <img width="40" src="./img/icon_asuransi.svg" alt="">
-          <p class="text-[#787878] text-center">Asuransi Mobil</p>
+          <a href="vehicle.php">
+          <p class="text-[#787878] text-center">Asuransi Mobil</p></a>
         </div>
       </div>
     </div>

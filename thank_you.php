@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" href="img/iconlogo.png">
     <title>Terima Kasih</title>
     <style>
         body {
