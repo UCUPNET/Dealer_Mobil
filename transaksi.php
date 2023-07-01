@@ -168,7 +168,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                 </div>
                 <div>
-                    <a class="px-6 py-2 w-full mb-16 mt-5 inline-block text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="transaksi.php">Beli
+                    <a class="px-6 py-2 w-full mb-16 mt-5 inline-block text-center rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF]" href="thank_you.php">Beli
                         Sekarang</a>
                 </div>
                 </form>

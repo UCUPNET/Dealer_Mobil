@@ -24,7 +24,13 @@ function login($username, $password) {
     if ($user) {
         session_start();
         $_SESSION['username'] = $user['username'];
-        header('Location: dashboardutama.php');
+        
+        if ($user['role'] == 'admin') {
+            header('Location: dashboardutama.php');
+        } elseif ($user['role'] == 'user') {
+            header('Location: index.php');
+        }
+        
         exit();
     } else {
         return false;
@@ -46,9 +52,11 @@ if (isset($_POST['login'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+    <link rel="stylesheet" href="dist/output.css">
+    <link rel="icon" href="img/iconlogo.png">
 </head>
 <body>
 <section style="background : url('./img/Background_belakang.jpg') no-repeat fixed center; background-size: cover;" class="bg-gray-50 dark:bg-gray-900">

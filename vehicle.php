@@ -46,7 +46,7 @@ $data_mobil = getMobilData();
         <h2 class="font-extrabold text-3xl text-center my-10">Pilih Mobil yang anda suka</h2>
         <div class="grid grid-cols-4 w-10/12 mx-auto gap-4 my-12 ">
         <?php foreach ($data_mobil as $row): ?>
-            <div class="flex flex-col justify-center items-center px-7 py-12 shadow-lg gap-5 rounded-xl">
+            <div class="flex md:static flex-col justify-center items-center px-7 py-12 shadow-lg gap-5 rounded-xl">
                 <img width="200" src="./img/<?= $row['gambar']; ?>" alt="">
                 <p class="text-[#787878] text-center"><?php echo $row['model']; ?></p>
                 <p class="text-[#E71D4F] font-extrabold text-center">Rp <?= number_format($row['harga']); ?></p>

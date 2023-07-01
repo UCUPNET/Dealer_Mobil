@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body id="body">
   <?php include('header.php');?>
-  <main style="background : url('./img/blog2.jpg')" id="main">
+  <main style="background : url('./img/background.jpg')" id="main">
     
     <section  id="contact" class="pt-32 container mx-auto ">
 

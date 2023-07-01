@@ -28,17 +28,17 @@
   <div class="flex text-white gap-9 mr-11">
       <div class="flex flex-col gap-6">
         <h4 class="font-extrabold">About Us</h4>
-        <a class="text-[12px]" href="index.php">Halaman Utama</a>
-        <a class="text-[12px]" href="vehicle.php">Vehicle</a>
-        <a class="text-[12px]" href="about.php">Tentang Kami</a>
-        <a class="text-[12px]" href="">Layanan</a>
+        <a class="text-[12px] hover:text-red-500" href="index.php">Halaman Utama</a>
+        <a class="text-[12px] hover:text-red-500" href="vehicle.php">Vehicle</a>
+        <a class="text-[12px] hover:text-red-500" href="about.php">Tentang Kami</a>
+        <a class="text-[12px] hover:text-red-500" href="">Layanan</a>
       </div>
       <div class="flex flex-col gap-6">
         <h4 class="font-extrabold">Hubungi</h4>
-        <a class="text-[12px]" href="">Kontak</a>
-        <a class="text-[12px]" href="">Facebook</a>
-        <a class="text-[12px]" href="">Instagram</a>
-        <a class="text-[12px]" href="">Twitter</a>
+        <a class="text-[12px] hover:text-red-500" href="">Kontak</a>
+        <a class="text-[12px] hover:text-red-500" href="">Facebook</a>
+        <a class="text-[12px] hover:text-red-500" href="">Instagram</a>
+        <a class="text-[12px] hover:text-red-500" href="">Twitter</a>
       </div>
   </div>
 

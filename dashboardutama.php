@@ -12,19 +12,6 @@ if (!$conn) {
     die('Koneksi database gagal: ' . mysqli_connect_error());
 }
 
-function getPelangganData() {
-  global $conn;
-  $query = "SELECT * FROM pelanggan";
-  $result = mysqli_query($conn, $query);
-
-  $data = array();
-  while ($row = mysqli_fetch_assoc($result)) {
-      $data[] = $row;
-  }
-
-  return $data;
-}
-
 function tambah_data_Mobil($merk, $model, $harga, $gambar, $tahun_produksi, $deskripsi) {
     global $conn;
     $merk = mysqli_real_escape_string($conn, $merk);
@@ -68,13 +55,12 @@ if (isset($_POST['tambah_data_mobil'])) {
     move_uploaded_file($gambar['tmp_name'], '../img/vehicleimages/' .$gambar['name']);
 
     tambah_data_Mobil($merk, $model, $harga, $gambar['name'], $tahun_produksi, $deskripsi);
-    header('Location: index.php');
+    header('Location: crud.php');
     exit();
 }
 
 // Mengambil data dari tabel mobil, pelanggan
 $data_mobil = getMobilData();
-$data_pelanggan = getPelangganData();
 ?>
 
 
@@ -98,14 +84,14 @@ $data_pelanggan = getPelangganData();
     <?php 
       if(isset($_GET['p'])){
         if($_GET['p']=="home"){
-          include "home.php";
+          include "Home.php";
         }else if($_GET['p']=="produk"){
-          include "produk.php";
+          include "product.php";
         } else if($_GET['p']=="crud"){
           include "crud.php";
         }
       } else {
-        include "home.php";
+        include "Home.php";
       }
     ?>
     </div>
