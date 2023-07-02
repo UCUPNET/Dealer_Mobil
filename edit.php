@@ -38,26 +38,27 @@ $query = mysqli_query($conn, $sql);
 $mobil = mysqli_fetch_assoc($query);
 ?>
 
-<h2>Tambah Data Mobil</h2>
-<form action="edit.php" method="POST" enctype="multipart/form-data">
+<div class="flex flex-col min-h-screen justify-between w-6/12 mx-auto py-20 space-y-9 shadow-2xl p-5 w-50% " >
+    <h2 class="text-center font-extrabold">Update Database</h2>
+    <form action="edit.php" method="POST" enctype="multipart/form-data">
     <input type="hidden" name="id" value="<?= $mobil['id'] ?>">
     <label for="merk">Merk:</label>
-    <input type="text" id="Merk" value="<?= $mobil['merk'] ?>" name="merk" required><br>
+    <input type="text" id="Merk" class="border  border-[#787878]-200 mx-10 my-10" value="<?= $mobil['merk'] ?>" name="merk" required><br>
 
     <label for="model">Model:</label>
-    <input type="text" id="Model" value="<?= $mobil['model'] ?>" name="model" required><br>
+    <input type="text" id="Model" class="border  border-[#787878]-200 mx-10 my-10" value="<?= $mobil['model'] ?>" name="model" required><br>
 
     <label for="harga">Harga:</label>
-    <input type="text" id="Harga" value="<?= $mobil['harga'] ?>" name="harga" required><br>
+    <input type="text" id="Harga" class="border  border-[#787878]-200 mx-10 my-10" value="<?= $mobil['harga'] ?>" name="harga" required><br>
 
     <label for="Foto">Gambar:</label>
-    <input type="file" id="Gambar" name="gambar"><br>
+    <input type="file" id="Gambar" class="border  border-[#787878]-200 mx-10 my-10" name="gambar"><br>
 
     <label for="Tahun_Produksi">Tahun Produksi:</label>
-    <input type="text" id="Tahun_Produksi" value="<?= $mobil['tahun_produksi'] ?>" name="tahun_produksi" required><br>
+    <input type="text" id="Tahun_Produksi" class="border  border-[#787878]-200 mx-10 my-10" value="<?= $mobil['tahun_produksi'] ?>" name="tahun_produksi" required><br>
 
     <label for="Deskripsi">Deskripsi:</label>
-    <input type="text" id="Deskripsi" value="<?= $mobil['deskripsi'] ?>" name="deskripsi" required><br>
+    <input type="text" id="Deskripsi" class="border  border-[#787878]-200 mx-10 my-10" value="<?= $mobil['deskripsi'] ?>" name="deskripsi" required><br>
 
     <input type="submit" name="edit_data_mobil" value="Update">
 </form>

@@ -73,6 +73,6 @@ error_reporting(0);
       const navLinks = document.querySelector('.nav-links')
       function onToggleMenu(e){
         e.name = e.name === 'grid' ? 'close' : 'grid'
-        navLinks.classList.toggle('top-[17%]')
+        navLinks.classList.toggle('top-[13%]')
       }
   </script>

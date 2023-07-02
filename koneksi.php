@@ -1,14 +1,16 @@
 <?php
-$host = 'localhost';
-$db   = 'dealer_mobil';
-$user = 'root';
-$pass = '';
 
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch(PDOException $e) {
-    echo "Koneksi gagal: " . $e->getMessage();
-    die();
+// Update Data Mahasiswa
+$id = $_GET['id'] ?? $_POST['id'];
+
+// Menghubungkan ke database
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'dealer_mobil';
+
+$conn = mysqli_connect($host, $username, $password, $database);
+
+if (!$conn) {
+    die('Koneksi database gagal: ' . mysqli_connect_error());
 }
-?>

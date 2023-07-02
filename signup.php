@@ -46,7 +46,6 @@ if (isset($_POST['signup'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../path/to/flowbite/dist/flowbite.min.js"></script>
     <link rel="stylesheet" href="dist/output.css">
     <link rel="icon" href="img/iconlogo.png">
 </head>
@@ -77,7 +76,7 @@ if (isset($_POST['signup'])) {
                           <option value="user">User</option>
                       </select>
                   </div>
-                  <button type="submit" class="w-full text-black bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" name="signup">Signup</button>
+                  <button type="submit" class="w-full text-black bg-red-600 hover:bg-white-600 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 text-white" name="signup">Signup</button>
                   <p class="text-sm font-light text-gray-500 dark:text-gray-400">
                       Already have an account? <a href="loginpage.php" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Login</a>
                   </p>

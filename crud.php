@@ -27,7 +27,7 @@
         <label for="Deskripsi" >Deskripsi:</label>
         <input type="text" class="border  border-[#787878]-200 mx-10 my-10" id="Deskripsi" name="deskripsi" required><br>
 
-        <input type="submit" class="px-5 py-1 rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF] justify-center"  name="post" value="Tambah">
+        <input type="submit" class="px-5 py-1 rounded-lg font-bold bg-[#E71D4F] text-[#FFFFFF] text-center justify-center"  name="tambah_data_mobil" value="Tambah">
     </form>
     </div>
 </section>

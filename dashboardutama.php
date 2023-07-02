@@ -52,7 +52,7 @@ if (isset($_POST['tambah_data_mobil'])) {
         die('No File Uploaded.');
     }
     // print_r($_FILES); die();
-    move_uploaded_file($gambar['tmp_name'], '../img/vehicleimages/' .$gambar['name']);
+    move_uploaded_file($gambar['tmp_name'], './img/vehicleimages/' .$gambar['name']);
 
     tambah_data_Mobil($merk, $model, $harga, $gambar['name'], $tahun_produksi, $deskripsi);
     header('Location: crud.php');
